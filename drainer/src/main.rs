@@ -1,4 +1,4 @@
-use std::{thread::sleep, env, fs::File, io::Write};
+use std::{thread::sleep, env};
 
 pub mod bindings { pub mod erc20;}
 use bindings::erc20 as ERC20;
@@ -6,7 +6,7 @@ use bindings::erc20 as ERC20;
 // need to call etherscan api for transfers of erc20, ether, and erc721
 // track block numbers, until block #1679155200 // what the fuck?
 // can use ethers-rs to get the block number and maybe track txns??
-use ethers::{prelude::*, types::transaction::eip2718::TypedTransaction, utils::hex};
+use ethers::{prelude::*, utils::hex};
 use tokio;
 use reqwest;
 use std::time::Duration;
